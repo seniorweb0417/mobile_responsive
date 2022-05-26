@@ -261,6 +261,7 @@ body {
 }
 
 .most-popular-section img {
+    width: 100%;
     border-radius: 15px;
     margin-bottom: 25px;
 }
@@ -273,4 +274,102 @@ body {
 .most-popular-section .qty {
     padding: 0px 20px;
     font-size: 24px;
+}
+
+.discover-section {
+    position: relative;
+    padding: 80px 96px;
+    background: #6b50fc;
+    border-radius: 20px;
+}
+
+.discover-section h2 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 53px;
+    color: white;
+}
+
+.discover-section p {
+    font-size: 24px;
+    color: white;
+    margin: 40px 0;
+    width: 800px;
+}
+
+.discover-section button {
+    border-radius: 30px;
+    border: none;
+    color: #ff4646;
+    padding: 23px 46px;
+    background: white;
+}
+
+.discover-section img {
+    position: absolute;
+    top: -27px;
+    right: 43px;
+}
+
+@media (max-width: 1400px) {
+    .discover-section {
+        text-align: center;
+    }
+
+    .discover-section h2 {
+        margin-top: 400px;
+        text-align: center;
+    }
+
+    .discover-section p {
+        text-align: center;
+        width: 100%;
+    }
+
+    .discover-section img {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+
+.about-section {
+    padding: 140px 0;
+}
+
+.about-section img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.about-section .purple {
+    color: #6346fa;
+    font-size: 30px;
+    margin-top: 35px;
+}
+
+.about-section h1 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 60px;
+    line-height: 70px;
+}
+
+.about-section .large {
+    font-size: 27px;
+    color: #050038;
+}
+
+.about-section .small {
+    font-size: 23px;
+    margin: 30px auto;
+}
+
+.about-section ul {
+    margin: 0; 
+    padding: 0;
+}
+
+.about-section ul li {
+    list-style: none;
+    padding-left: 40px;
+    background: url('../img/img08.png') center left no-repeat;
+    line-height: 50px;
 }
