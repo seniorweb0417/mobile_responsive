@@ -109,12 +109,168 @@ body {
 
 .flat-container {
     width: 1576px;
+    max-width: 1576px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1575px) {
+    .flat-container {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .header-wrapper {
-    height: 110px;
+    padding: 30px 0;
 }
 
-.header-wrapper .navbar a {
+.navbar {
+    height: 50px;
+    margin: 0;
+}
+
+.navbar .navbar-brand {
+    padding: 0;
+}
+
+.navbar .icon-bar {
+    border: 1px solid #e6e5eb;
+}
+
+.navbar-collapse {
+    background: white;
+}
+
+.btn {
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: 1px solid #e6e5eb;
+    min-width: 110px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.btn.danger {
+    background: #ff4646;
+    color: white!important;
+}
+
+.btn.danger:hover,
+.btn.danger:focus {
+    background: #ff4646;
+}
+
+.navbar a {
     color: black;
+}
+
+
+.filter-wrapper {
+    background: #f6f7fa;
+    padding: 18px 0;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin-right: 18px;
+    margin-bottom: 5px;
+    border: 1px solid #d2d2dd;
+    border-radius: 50px;
+    font-size: 19px;
+    color: #5d5a78;
+    background: white;
+}
+
+.filter-btn.on {
+    background: #6346fa;
+    color: white;
+}
+
+.flat-semi-container {
+    width: 1300px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1300px) {
+    .flat-semi-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.intro-section {
+    padding: 150px 0 100px 0;
+    font-size: 24px;
+}
+
+.intro-section h1 {
+    font-size: 70px;
+}
+
+.search-section {
+    height: 700px;
+    background: url('../img/img01.jpg') bottom no-repeat;
+}
+
+.search-section .nav-tabs {
+    border: none;
+}
+
+.search-section .tab-content {
+    background: white;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0px 0px 5px #EEE;
+}
+
+.search-section .tab-content .tab-pane {
+    padding: 0;
+    position: relative
+}
+
+.search-section .nav li {
+    background: #eaeaee;
+    border-radius: 5px;
+    margin-right: 10px;
+    min-width: 120px;
+}
+
+.search-section .nav li a {
+    color: #616478;
+}
+
+.search-section .nav li.active {
+    background: none;
+}
+
+.search-section input {
+    width: 100%;
+    height: 55px;
+    border: none;
+}
+
+.most-popular-section {
+    padding: 160px 0px;
+}
+
+.most-popular-section h2 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 60px;
+    margin-bottom: 65px;
+}
+
+.most-popular-section img {
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.most-popular-section .caption {
+    padding: 0px 20px;
+    font-size: 33px;
+}
+
+.most-popular-section .qty {
+    padding: 0px 20px;
+    font-size: 24px;
 }
