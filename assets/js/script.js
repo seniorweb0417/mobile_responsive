@@ -4,3 +4,7 @@ $(document).ready(function() {
         $('.filter-wrapper').toggleClass('on');
     });
 });
+
+function showSignupModal() {
+    $('#signup-modal').modal();
+}

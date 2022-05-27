@@ -142,6 +142,14 @@ body {
     background: white;
 }
 
+@media (max-width: 767px) {
+    .navbar-collapse {
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
 .navbar-collapse.in {
     position: absolute;
     width: 100%;
@@ -317,6 +325,7 @@ body {
 .most-popular-section .qty {
     padding: 0px 20px;
     font-size: 24px;
+    margin-bottom: 25px;
 }
 
 .discover-section {
@@ -600,11 +609,15 @@ body {
     margin-bottom: 35px;
 }
 
+.footer .links a {
+    color: #050038;
+    text-decoration: none;
+}
+
 .footer .link-item {
     padding: 0 30px;
     border-right: 1px solid #d2d1d7;
 }
-
 
 .footer .link-item:first-of-type {
     padding-left: 0;
@@ -612,4 +625,8 @@ body {
 
 .footer .link-item:last-of-type {
     border: none;
+}
+
+.modal img {
+    width: 100%;
 }
