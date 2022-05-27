@@ -256,6 +256,7 @@ body {
 
 .intro-section h1 {
     font-size: 70px;
+    margin-top: 0;
 }
 
 .search-section {
