@@ -14,7 +14,7 @@ $(document).ready(function() {
         change: refreshSwatch
     });
 
-    $('.filter-wrapper .dropdown .dropdown-menu').on('click', function (e) {
+    $('.dropdown .dropdown-menu').on('click', function (e) {
         e.stopPropagation();
         // $(this).parent().toggleClass('open');
     });
