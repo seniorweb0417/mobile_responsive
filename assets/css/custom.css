@@ -108,6 +108,7 @@ body {
 }
 
 .flat-container {
+    position: relative;
     width: 1576px;
     max-width: 1576px;
     margin: 0 auto;
@@ -141,6 +142,16 @@ body {
     background: white;
 }
 
+.navbar-collapse.in {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+
+.navbar .nav-link {
+    display: inline-block;
+}
+
 .btn {
     padding: 15px 30px;
     border-radius: 30px;
@@ -164,16 +175,47 @@ body {
     color: black;
 }
 
-
 .filter-wrapper {
     background: #f6f7fa;
     padding: 18px 0;
+    position: relative;
+    height: 80px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.filter-wrapper.on {
+    height: auto;
+}
+
+.filter-wrapper .more-link {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color:#050038;
+    text-decoration: none;
+}
+
+.filter-wrapper .more-link .normal {
+    display: block;
+}
+
+.filter-wrapper .more-link .on {
+    display: none;
+}
+
+.filter-wrapper .more-link.on .normal {
+    display: none;
+}
+
+.filter-wrapper .more-link.on .on {
+    display: block;
 }
 
 .filter-btn {
     padding: 10px 20px;
     margin-right: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     border: 1px solid #d2d2dd;
     border-radius: 50px;
     font-size: 19px;
@@ -211,6 +253,7 @@ body {
 .search-section {
     height: 700px;
     background: url('../img/img01.jpg') bottom no-repeat;
+    background-size: 100% 85%;
 }
 
 .search-section .nav-tabs {
@@ -333,6 +376,7 @@ body {
 
 .about-section {
     padding: 140px 0;
+    color: #050038;
 }
 
 .about-section img {
@@ -354,7 +398,6 @@ body {
 
 .about-section .large {
     font-size: 27px;
-    color: #050038;
 }
 
 .about-section .small {
@@ -372,4 +415,201 @@ body {
     padding-left: 40px;
     background: url('../img/img08.png') center left no-repeat;
     line-height: 50px;
+}
+
+.service-section {
+    padding-bottom: 65px;
+    text-align: center;
+    color: #050038;
+}
+
+.service-section h2 {
+    font-size: 50px;
+}
+
+.service-section p {
+    font-size: 27px;
+}
+
+.service-section img {
+    width: 130px;
+    height: 130px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px #eee;
+}
+
+.service-section .caption {
+    font-size: 35px;
+}
+
+.service-section .comment {
+    font-size: 19px;
+}
+
+.service-section button {
+    margin-top: 50px;
+}
+
+.news-section {
+    padding: 85px 0;
+}
+
+.news-section img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+.news-section .news-img-wrapper {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.news-section .news-img-wrapper .property-news {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    width: 90%;
+}
+
+.news-section button {
+    background: #6346fa;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-size: 17px;
+    padding: 10px 19px;
+    margin-bottom: 30px;
+}
+
+.news-section .news-img-wrapper p {
+    color: white;
+    font-size: 34px;
+}
+
+.news-section .map-search-wrapper .search-item {
+    margin-bottom: 25px;
+    border-radius: 20px;
+    /* border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px; */
+    box-shadow: 0 0 10px #EEE;
+}
+
+.news-section .map-search-wrapper a {
+    color: #ff4646;
+    padding-right: 25px;
+    background: url('../img/img15.png') center right no-repeat;
+}
+
+.news-section .map-search-wrapper img {
+    width: 90%;
+}
+
+@media (max-width: 991px) {
+    .news-section .map-search-wrapper img {
+        width: 100%;
+    }
+}
+
+.news-section .map-search-wrapper .search-str-wrapper {
+    padding: 50px 15px;
+}
+
+.journey-wrapper {
+    padding: 160px 0;
+    min-height: 500px;
+    background: url('../img/img16.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.journey-wrapper h2 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 53px;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.journey-wrapper input {
+    background: white;
+    border: none;
+    border-radius: 30px;
+    line-height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    margin-bottom: 15px;
+}
+
+.journey-wrapper button {
+    margin-bottom: 15px;
+}
+
+.site-map {
+    padding: 160px 0;
+    color: #050038;
+    border-bottom: 1px solid #e9eaeb;
+}
+
+.site-map .logo {
+    display: block;
+    margin-bottom: 45px;
+}
+
+.site-map .social {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    background: white;
+    border-radius: 50%;
+    border: 1px solid #e5e5e5;
+    display: inline-block;
+    text-align: center;
+    color: #050038;
+}
+
+.site-map .social:hover {
+    background: #6346fa;
+    border: 1px solid #6346fa;
+}
+
+.site-map .social:hover i {
+    color: white;
+}
+
+.site-map .social i {
+    font-size: 25px;
+}
+
+.site-map h3 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 25px;
+}
+
+.site-map .site-map-link {
+    font-size: 19px;
+    line-height: 38px;
+    display: block;
+    color: #050038;
+}
+
+.footer {
+    padding: 60px 0;
+}
+
+.footer .links {
+    margin-bottom: 35px;
+}
+
+.footer .link-item {
+    padding: 0 30px;
+    border-right: 1px solid #d2d1d7;
+}
+
+
+.footer .link-item:first-of-type {
+    padding-left: 0;
+}
+
+.footer .link-item:last-of-type {
+    border: none;
 }
