@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Flatlocate</title>
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="description" content="Let’s find a home that’s perfect for you">
+        <meta name="keywords" content="Flatlocate, Buy, Sell, Rent, Find Agent, House Prices">
+        <meta name="author" content="FlatLocate">
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHcRvuCfw6MdafvkS7MRoAjHadaftWDuI&libraries=places"></script>
+        <link rel="stylesheet" href="assets/css/custom.css">
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/map.js"></script>
+    </head>
+    <body>
+        <div class="header-wrapper flat-container">
+            <nav class="navbar">
+                <div class="navbar-header">
+                    <div class="container-fluid">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo" /></a>
+                    </div>
+                </div>
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                    <div class="input-group">
+                      <input type="text" class="form-control" id="gmap-search" placeholder="Search by location">
+                      <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
+                    </div>
+                </form>
+                <div class="collapse navbar-collapse navbar-right" id="collapsibleNavbar">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="nav-link" href="#">Buy</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Rent</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Find Agent</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">House Prices</a>
+                        </li>
+                        <li class="text-center profile">
+                            <div class="dropdown">
+                                <div class="container-fluid dropdown-toggle" id="profile-menu" data-toggle="dropdown">
+                                    <div class="col-md-3">
+                                        <img src="assets/img/profile.jpg" alt="profile" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h3>
+                                            Zorden Lack
+                                            <a href="#">
+                                                <i class="glyphicon glyphicon-chevron-down"></i>
+                                            </a>
+                                        </h3>
+                                        <p>Looking for</p>
+                                    </div>
+                                </div>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="profile-menu">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Saved searches</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Your home</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Offers & Closings</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Renting</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Account settings</a></li>
+                                    <li role="presentation" class="signout-li"><a role="menuitem" tabindex="-1" href="#">Sign out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                </nav>
+        </div>
+        <div class="filter-wrapper">
+            <div class="flat-container container">
+                <a class="more-link" href="javascript:void(0);">
+                    <i class="glyphicon glyphicon-chevron-right normal"></i>
+                    <i class="glyphicon glyphicon-chevron-down on"></i>
+                </a>
+                <button class="filter-btn">Garden</button>
+                <button class="filter-btn">Parking</button>
+                <button class="filter-btn">Modern</button>
+                <button class="filter-btn">Balcony</button>
+                <button class="filter-btn">Number of beds</button>
+                <button class="filter-btn on">Price</button>
+                <button class="filter-btn">Bathroom</button>
+                <button class="filter-btn">Furniture</button>
+                <button class="filter-btn">Location</button>
+                <button class="filter-btn">Backyard</button>
+                <button class="filter-btn on">Residence</button>
+            </div>
+        </div>
+        <div class="flat-semi-container intro-section">
+            <div class="container-fluid">
+                <div class="col-lg-6 col-md-6">
+                    <h1>Let’s find a home that’s perfect for you</h1>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit Integer nec arcu ligula Ut posuere sem eget hendrerit sodales.
+                </div>
+            </div>
+        </div>
+        <div class="search-section">
+            <div class="flat-semi-container">
+                <ul class="nav nav-tabs">
+                    <li class="active text-center"><a data-toggle="tab" href="#buy">Buy</a></li>
+                    <li class="text-center"><a data-toggle="tab" href="#sell">Sell</a></li>
+                    <li class="text-center"><a data-toggle="tab" href="#rent">Rent</a></li>
+                </ul>
+                  
+                <div class="tab-content">
+                    <div id="buy" class="tab-pane fade in active container-fluid">
+                        <div class="col-md-10 row">
+                            <input type="text" placeholder="Enter an address, neighborhood, city, or ZIP code">
+                        </div>
+                        <div class="col-md-2 text-right">
+                            <div class="row">
+                                <button class="btn danger">Search Now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sell" class="tab-pane fade">
+                      <h3>Sell</h3>
+                      <p>Some content in menu 1.</p>
+                    </div>
+                    <div id="rent" class="tab-pane fade">
+                      <h3>Rent</h3>
+                      <p>Some content in menu 2.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="most-popular-section">
+            <h2 class="text-center">Most Popular Place</h2>
+            <div class="flat-container">
+                <div class="container-fluid">
+                    <div class="col-md-3">
+                        <img src="assets/img/img02.jpg" />
+                        <div class="caption">London</div>
+                        <div class="qty">Pop. 9.0 million</div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="assets/img/img03.jpg" />
+                        <div class="caption">Edinburgh</div>
+                        <div class="qty">Pop. 500,000</div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="assets/img/img04.jpg" />
+                        <div class="caption">Manchester</div>
+                        <div class="qty">Pop. 500,000</div>
+                    </div>
+                    <div class="col-md-3">
+                        <img src="assets/img/img05.jpg" />
+                        <div class="caption">Birmingham</div>
+                        <div class="qty">Pop. 1.1 million</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flat-container container">
+            <div class="discover-section">
+                <h2>Discover a place you'll love to live</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Integer nec arcu ligula Ut posuere sem eget hendrerit sodales.</p>
+                <button>Discover your perfect location</button>
+                <img src="assets/img/img06.png" alt="">
+            </div>
+        </div>
+        <div class="flat-container about-section">
+            <div class="container-fluid">
+                <div class="col-md-6"><img src="assets/img/img07.jpg" alt="" /></div>
+                <div class="col-md-6">
+                    <div class="purple">About Us</div>
+                    <h1>Flatlocate</h1>
+                    <p class="large">Lorem ipsum dolor sit amet, consectetur scing Fusce vulputate erat sit amet est tincidunt euismod lacus.</p>
+                    <p class="small">Lorem ipsum dolor sit amet, consectetur adipiscing elit Fusce vulputate erat sit amet est tincidunt eu euismod lacus egestas. Suspendisse ornare consequat purus, sed consequat nulla.</p>
+                    <ul>
+                        <li>Lorem ipsum dolor amet consectetur adipiscing Fusce</li>                        
+                        <li>Culputate erat sit amet est tincidunt euismod lacu</li>
+                        <li>Suspendisse ornare euismod mauris dolor consequat</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="flat-container service-section">
+            <h2>The Services You Get From Restate</h2>
+            <p>Some people choose price as a primary reason. Those companies that get customers because of the low prices will lose those customers.</p>
+            <div class="container-fluid">
+                <div class="col-md-4">
+                    <img src="assets/img/img09.png" alt="" />
+                    <div class="caption">Buy Properties</div>
+                    <div class="comment">Lorem ipsum dolor sconse adipiscing elit Integer nec arcu ligula posuere.</div>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/img/img10.png" alt="" />
+                    <div class="caption">Sell Properties</div>
+                    <div class="comment">Lorem ipsum dolor sconse adipiscing elit Integer nec arcu ligula posuere.</div>
+                </div>
+                <div class="col-md-4">
+                    <img src="assets/img/img11.png" alt="" />
+                    <div class="caption">Rent Properties</div>
+                    <div class="comment">Lorem ipsum dolor sconse adipiscing elit Integer nec arcu ligula posuere.</div>
+                </div>
+                <div class="col-md-12"><button class="btn danger">Discover Your New Home</button></div>
+            </div>
+        </div>
+        <div class="flat-container news-section">
+            <div class="container-fluid">
+                <div class="col-md-5 news-img-wrapper">
+                    <img src="assets/img/img12.jpg" alt="" />
+                    <div class="property-news">
+                        <button>PROPERTY NEWS</button>
+                        <p>Posuere sem eget hendrerit sodales Integer est diam molestie quis</p>
+                    </div>
+                </div>
+                <div class="col-md-7 map-search-wrapper">
+                    <div class="search-item clearfix">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <img src="assets/img/img13.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="col-md-6 search-str-wrapper">
+                            <button>MAP SEARCH</button>
+                            <p>Posuere sem eget hendrerit sodales Integer est diam molestie</p>
+                            <a href="#">Find out more</a>
+                        </div>
+                    </div>
+                    <div class="search-item clearfix">
+                        <div class="col-md-6">
+                            <div class="row">
+                                <img src="assets/img/img14.jpg" alt="" />
+                            </div>
+                        </div>
+                        <div class="col-md-6 search-str-wrapper">
+                            <button>MAP SEARCH</button>
+                            <p>Posuere sem eget hendrerit sodales Integer est diam molestie</p>
+                            <a href="#">Find out more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="journey-wrapper">
+            <h2 class="text-center">Ready to start your journey?</h2>     
+            <div class="flat-semi-container clearfix">
+                <div class="col-md-5"><input placeholder="Full Name" /></div>
+                <div class="col-md-5"><input placeholder="Email Address" /></div>
+                <div class="col-md-2 text-center"><button class="btn danger">Sign Up</button></div>
+            </div>
+        </div>
+        <div class="site-map flat-container clearfix">
+            <div class="col-md-4">
+                <img class="logo" src="assets/img/logo.png" alt="Logo" />
+                <a class="social" href="#"><i class="fa fa-twitter"></i></a>
+                <a class="social" href="#"><i class="fa fa-facebook"></i></a>
+                <a class="social" href="#"><i class="	fa fa-linkedin"></i></a>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <h3>Quick links</h3>
+                <a class="site-map-link" href="#">Buy</a>
+                <a class="site-map-link" href="#">Rent</a>
+                <a class="site-map-link" href="#">Find Agent</a>
+                <a class="site-map-link" href="#">House Prices</a>
+                <a class="site-map-link" href="#">Contact Us</a>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <h3>Resources</h3>
+                <a class="site-map-link" href="#">Stamp duty</a>
+                <a class="site-map-link" href="#">Students</a>
+                <a class="site-map-link" href="#">Removals</a>
+                <a class="site-map-link" href="#">Property guides</a>
+                <a class="site-map-link" href="#">Help to duty</a>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <h3>Locations</h3>
+                <a class="site-map-link" href="#">England</a>
+                <a class="site-map-link" href="#">Scotland</a>
+                <a class="site-map-link" href="#">Northern Ireland</a>
+                <a class="site-map-link" href="#">Wales</a>
+                <a class="site-map-link" href="#">London</a>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <h3>About</h3>
+                <a class="site-map-link" href="#">Newsroom</a>
+                <a class="site-map-link" href="#">Learn about new features</a>
+                <a class="site-map-link" href="#">Letter from our founders</a>
+                <a class="site-map-link" href="#">Careers</a>
+                <a class="site-map-link" href="#">Investors</a>
+            </div>
+        </div>
+        <div class="footer flat-container">
+            <div class="container-fluid">
+                <div class="links">
+                    <span class="link-item">&copy; 2022 <b>Flatlocate.</b> All rights reserved.</span>
+                    <span class="link-item"><a href="#">Sitemap</a></span>
+                    <span class="link-item"><a href="#">Terms Of Use</a></span>
+                    <span class="link-item"><a href="#">Privacy Policy</a></span>
+                </div>
+                <p>
+                    <b>Disclaimer:</b> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et dictum eros, eu dignissim nibh. Donec at scelerisque sem. Aliquam mattis dolor non neque sollicitudin pretiumis Phasellus lacinia pulvinar sem, sit amet varius nisl elementum quis. In efficitur dictum magna eu cusrsus. Proins tristique masguris nisl, sit amet sollicitgudin felis magsttis eget. Suspendissse ullamcorper ex eu dolor euismod condimentum a ut lacus. Nam malesuada iaculis purus, non tempus tellus hendrerit et. 
+                </p>
+            </div>
+        </div>
+        <div class="modal" id="signup-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body text-center">
+                    <img src="assets/img/img17.jpg" alt="" />
+                    <h2 class="text-center"><b>Thanks</b> for signing up.</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscingaff elit Fusce vulputate erat sit amet est tincidunt eu euismoafd lacus egestas. Suspendisse ornare consequat purus.
+                    </p>
+                    <button type="button" class="btn danger" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </body>
+</html>
