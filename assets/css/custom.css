@@ -276,11 +276,141 @@ body {
     width: 100%;
 }
 
+.filter-wrapper .dropdown {
+    display: inline-block;
+}
+
+.filter-wrapper .dropdown-menu {
+    min-width: 600px;
+    padding: 30px 0;
+}
+
+.filter-wrapper .dropdown-menu h3 {
+    font-family: 'gt_walsheim_probold';
+    padding: 0 30px;
+    font-size: 24px;
+}
+
+.filter-wrapper .dropdown-menu h3.no-padding {
+    padding: 0;
+}
+
+.filter-wrapper #price-slider {
+    margin: 20px 0;
+}
+
+.filter-wrapper .ui-slider-range {
+    background: #6346fa;
+}
+
+.filter-wrapper .ui-slider-handle {
+    border-radius: 50%;
+    border: 3px solid #6346fa;
+}
+
+.filter-wrapper .dropdown-menu a {
+    line-height: 63px;
+    width: 100%;
+    display: block;
+    padding-left: 50px;
+    font-size: 22px;
+    color: #5d5a78;
+    text-decoration: none;
+}
+
+.filter-wrapper .dropdown-menu a:hover {
+    background: #6346f9;
+    color: white;
+}
+
+.filter-wrapper .dropdown-menu a.any {
+    background: url('../img/img18.png') 10px center no-repeat;
+}
+
+.filter-wrapper .dropdown-menu a.any:hover {
+    background: url('../img/img18_on.png') 10px center no-repeat #6346f9;
+}
+
+.filter-wrapper .dropdown-menu a.multi_family_home {
+    background: url('../img/img19.png') 10px center no-repeat;
+}
+
+.filter-wrapper .dropdown-menu a.multi_family_home:hover {
+    background: url('../img/img19_on.png') 10px center no-repeat #6346f9;
+}
+
+.filter-wrapper .dropdown-menu a.single_family_home {
+    background: url('../img/img20.png') 10px center no-repeat;
+}
+
+.filter-wrapper .dropdown-menu a.single_family_home:hover {
+    background: url('../img/img20_on.png') 10px center no-repeat #6346f9;
+}
+
+.filter-wrapper .dropdown-menu a.mobile {
+    background: url('../img/img21.png') 10px center no-repeat;
+}
+
+.filter-wrapper .dropdown-menu a.mobile:hover {
+    background: url('../img/img21_on.png') 10px center no-repeat #6346f9;
+}
+
+.filter-wrapper .dropdown-menu a.condo {
+    background: url('../img/img22.png') 10px center no-repeat;
+}
+
+.filter-wrapper .dropdown-menu a.condo:hover {
+    background: url('../img/img22_on.png') 10px center no-repeat #6346f9;
+}
+
+.filter-wrapper .dropdown-menu a.farm {
+    background: url('../img/img23.png') 10px center no-repeat;
+}
+
+.filter-wrapper .dropdown-menu a.farm:hover {
+    background: url('../img/img23_on.png') 10px center no-repeat #6346f9;
+}
+
+.filter-wrapper .dropdown-menu a.townhome {
+    background: url('../img/img24.png') 10px center no-repeat;
+}
+
+.filter-wrapper .dropdown-menu a.townhome:hover {
+    background: url('../img/img24_on.png') 10px center no-repeat #6346f9;
+}
+
+.filter-wrapper .dropdown-menu a.land {
+    background: url('../img/img25.png') 10px center no-repeat;
+}
+
+.filter-wrapper .dropdown-menu a.land:hover {
+    background: url('../img/img25_on.png') 10px center no-repeat #6346f9;
+}
+
+.filter-wrapper .inline-wrapper {
+    display: inline-block;
+    padding: 0 45px;
+}
+
+.filter-wrapper .inline-wrapper:first-of-type {
+    padding-left: 0;
+}
+
+.filter-wrapper .right-border {
+    border-right: 1px solid #cdced2;
+}
+
+.filter-wrapper.overflow-show {
+    height: auto;
+    overflow: visible;
+}
+
 .filter-wrapper.on {
     height: auto;
 }
 
-.filter-wrapper .more-link {
+.filter-wrapper .more-link,
+.filter-wrapper .filter-link {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -319,6 +449,7 @@ body {
     background: #6346fa;
     color: white;
 }
+
 
 .flat-semi-container {
     width: 1300px;
