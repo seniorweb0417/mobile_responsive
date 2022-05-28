@@ -1026,7 +1026,7 @@ body {
     background: #050038;
 }
 
-#filter-modal .modal-header .close {
+.modal-header .close {
     margin-top: -35px;
 }
 
@@ -1034,9 +1034,12 @@ body {
     color: white;
 }
 
-#filter-modal .modal-title {
+.modal-title {
     font-family: 'gt_walsheim_probold';
     font-size: 33px;
+}
+
+#filter-modal .modal-title {
     color: white;
 }
 
@@ -1297,4 +1300,9 @@ body {
 
 .property-detail-wrapper .reserve-wrapper .total {
     font-family: 'gt_walsheim_probold';
+}
+
+#image-modal img {
+    margin-bottom: 30px;
+    width: 100%;
 }

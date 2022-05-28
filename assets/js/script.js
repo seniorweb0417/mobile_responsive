@@ -62,3 +62,7 @@ function showSignupModal() {
 function showFilterModal() {
     $('#filter-modal').modal();
 }
+
+function showImageModal() {
+    $('#image-modal').modal();
+}
