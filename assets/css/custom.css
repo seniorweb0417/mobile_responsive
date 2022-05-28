@@ -865,18 +865,18 @@ body {
     width: 100%;
 }
 
-.map-search-wrapper {
+.map-filter-wrapper {
     padding: 40px 0;
 }
 
-.map-search-wrapper .dropdown-toggle,
-.map-search-wrapper .dropdown-toggle:hover {
+.map-filter-wrapper .dropdown-toggle,
+.map-filter-wrapper .dropdown-toggle:hover {
     border: none;
     background: transparent!important;
     padding: 0;
 }
 
-.map-search-wrapper .dropdown-menu a {
+.map-filter-wrapper .dropdown-menu a {
     height: 55px;
     line-height: 55px;
 }
