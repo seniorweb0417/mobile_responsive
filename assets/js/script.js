@@ -4,23 +4,27 @@ $(document).ready(function() {
         $('.filter-wrapper').toggleClass('on');
     });
 
-    $('#price-slider').slider({
-        orientation: "horizontal",
-        range: "min",
-        min: 10,
-        max: 1000,
-        value: 100,
-        slide: refreshSwatch,
-        change: refreshSwatch
-    });
+    if ($('#price-slider').length) {
+        $('#price-slider').slider({
+            orientation: "horizontal",
+            range: "min",
+            min: 10,
+            max: 1000,
+            value: 100,
+            slide: refreshSwatch,
+            change: refreshSwatch
+        });
+    }
 
-    $('#filter-price-slider').slider({
-        orientation: "horizontal",
-        range: true,
-        min: 10,
-        max: 1000,
-        values: [100, 500],
-    });
+    if ($('#filter-price-slider').length) {
+        $('#filter-price-slider').slider({
+            orientation: "horizontal",
+            range: true,
+            min: 10,
+            max: 1000,
+            values: [100, 500],
+        });
+    }
 
     $('.dropdown .dropdown-menu').on('click', function (e) {
         e.stopPropagation();
@@ -37,7 +41,13 @@ $(document).ready(function() {
         }
     });
 
-    $('.property-list .panel-left').mCustomScrollbar();
+    if ($('.property-list .panel-left').length) {
+        $('.property-list .panel-left').mCustomScrollbar();
+    }
+
+    if ($('.datepicker').length) {
+        $('.datepicker').datepicker();
+    }
 });
 
 function refreshSwatch() {

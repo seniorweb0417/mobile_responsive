@@ -105,6 +105,7 @@
 body {
     font-family: 'gt_walsheim_proregular';
     font-size: 20px;
+    color: #444259;
 }
 
 .flat-container {
@@ -1116,4 +1117,184 @@ body {
 #filter-modal .clearall-link {
     line-height: 55px;
     color: #050038;
+}
+
+.detail-img-wrapper img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.detail-img-wrapper a {
+    display: block;
+    line-height: 210px;
+    background: #f5f4fb;
+    border-radius: 20px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+.property-detail-wrapper {
+    color: #050038;
+    margin-bottom: 110px;
+}
+
+.property-detail-wrapper h1 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 55px;
+}
+
+.property-detail-wrapper .address {
+    font-size: 29px;
+}
+
+.property-detail-wrapper .address i {
+    margin-right: 15px;
+}
+
+.property-detail-wrapper .price-title {
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.property-detail-wrapper .price-value {
+    font-size: 37px;
+    color: #ff4646;
+}
+
+.property-detail-wrapper .description {
+    margin: 50px 0;
+}
+
+.property-detail-wrapper .condition-item {
+    padding: 35px;
+    border: 1px solid #e6e5eb;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.property-detail-wrapper .condition-item img {
+    display: block;
+    margin-bottom: 25px;
+    width: 36px;
+    height: 36px;
+}
+
+.property-detail-wrapper h2 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 35px;
+    margin-bottom: 35px;
+}
+
+.property-detail-wrapper .key-item {
+    padding-left: 30px;
+    margin-bottom: 22px;
+    background: url('../img/list_style.jpg') left center no-repeat;
+}
+
+.property-detail-wrapper #map_viewer {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 30px;
+}
+
+.property-detail-wrapper .thumbnail {
+    border-radius: 10px;
+    text-align: center;
+}
+
+.property-detail-wrapper .thumbnail img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.property-detail-wrapper .thumbnail h3 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 27px;
+}
+
+.property-detail-wrapper .thumbnail .distance {
+    color: #6346fa;
+}
+
+.property-detail-wrapper .border-round-wrapper {
+    border: 1px solid #e6e5eb;
+    border-radius: 10px;
+    margin-bottom: 45px;
+    padding: 50px;
+}
+
+.property-detail-wrapper .border-round-wrapper.author-wrapper {
+    position: relative;
+    margin-top: 175px;
+    padding: 100px 50px 50px 50px;
+    text-align: center;
+}
+
+.property-detail-wrapper .author-wrapper .profile {
+    position: absolute;
+    border-radius: 50%;
+    border: 10px solid white;
+    outline: 1px solid #e6e5eb;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.property-detail-wrapper .author-wrapper h2 {
+    margin-bottom: auto;
+}
+
+.property-detail-wrapper .author-wrapper .danger-link {
+    font-family: 'gt_walsheim_probold';
+    display: block;
+    color: #ff4646;
+    text-decoration: revert;
+    margin-top: 40px;
+}
+
+.property-detail-wrapper .reserve-wrapper h2 {
+    display: inline-block;
+    margin: 0;
+}
+
+.property-detail-wrapper .reserve-wrapper .review-qty {
+    line-height: 40px;
+}
+
+.property-detail-wrapper .reserve-wrapper h4 {
+    margin-top: 20px;
+    font-family: 'gt_walsheim_probold';
+    font-size: 15px;
+}
+
+.property-detail-wrapper .reserve-wrapper .datepicker {
+    border-radius: 30px;
+    border: 1px solid #b2b2b2;
+    width: 100%;
+    padding: 0 20px;
+    line-height: 50px;
+}
+
+.property-detail-wrapper .reserve-wrapper select {
+    border-radius: 30px;
+    border: 1px solid #b2b2b2;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+}
+
+.property-detail-wrapper .reserve-wrapper button {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.property-detail-wrapper .reserve-wrapper .service-item {
+    line-height: 40px;
+}
+
+.property-detail-wrapper .reserve-wrapper .total {
+    font-family: 'gt_walsheim_probold';
 }

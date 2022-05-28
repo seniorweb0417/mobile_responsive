@@ -10,10 +10,8 @@
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="assets/js/bootstrap-datepicker/css/bootstrap-datepicker.css">
         <link rel="stylesheet" href="assets/css/custom.css">
-        <script src="assets/js/script.js"></script>
     </head>
     <body>
         <div class="header-wrapper flat-container">
@@ -49,6 +47,165 @@
                     </ul>
                 </div>
                 </nav>
+        </div>
+        <div class="detail-img-wrapper flat-container clearfix">
+            <div class="col-md-8">
+                <img src="assets/img/img35.jpg" />
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-6"><img src="assets/img/img36.jpg" /></div>
+                <div class="col-md-6"><img src="assets/img/img36.jpg" /></div>
+                <div class="col-md-6"><img src="assets/img/img36.jpg" /></div>
+                <div class="col-md-6"><a href="#">+20 Photos</a></div>
+            </div>
+        </div>
+        <div class="property-detail-wrapper flat-container clearfix">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h1>James Street</h1>
+                        <p class="address"><i class="glyphicon glyphicon-map-marker"></i>London, W8 7SH</p>
+                    </div>
+                    <div class="col-md-3">
+                        <p class="price-title">Price</p>
+                        <p class="price-value">£3,800,000</p>
+                    </div>
+                </div>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit Sed finibus aliquam risus non cursus Etiam sit amet pharetra augue. Interdum et malesuada fames ac ante ipsum primis in faucibus Aliquam.
+                </p>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="condition-item">
+                            <img src="assets/img/img28_purple.png" />
+                            4 Guests
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="condition-item">
+                            <img src="assets/img/img29_purple.png" />
+                            2 Beds
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="condition-item">
+                            <img src="assets/img/img30_purple.png" />
+                            1 Bathroom
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="condition-item">
+                            <img src="assets/img/img37_purple.png" />
+                            30sq/m
+                        </div>
+                    </div>
+                </div>
+                <h2>About this property</h2>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit Sed finibus aliquam risus non cursus Etiam sit amet pharetra augue. Interdum et malesuada fames ac ante ipsum primis in faucibus Aliquam.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit Sed finibus aliquam risus non cursus Etiam sit amet pharetra augue. Interdum et malesuada fames ac ante ipsum primis in faucibus Aliquam.
+                </p>
+                <h2>Key features</h2>
+                <div class="container-fluid">
+                    <div class="col-md-6 key-item">Pretty and characterful Chelsea townhouse</div>
+                    <div class="col-md-6 key-item">West facing roof terrace and further private patio</div>
+                    <div class="col-md-6 key-item">Bright and elegant reception rooms</div>
+                    <div class="col-md-6 key-item">Ideal home or pied a terre</div>
+                    <div class="col-md-6 key-item">Quiet and convenient location</div>
+                </div>
+                <h2>Map</h2>
+                <div id="map_viewer"></div>
+                <button class="btn danger">Back to the Estate Agent</button>
+                <h2>Nearest train/metro station</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="assets/img/img38.jpg" alt="Lights">
+                            <div class="caption">
+                                <h3>Notting Hill Gate</h3>
+                                <p>Subway station</p>
+                                <div class="container-fluid distance">
+                                    <div class="col-md-6 text-left">3 Min</div>
+                                    <div class="col-md-6 text-right">0.4 Mile</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="assets/img/img38.jpg" alt="Lights">
+                            <div class="caption">
+                                <h3>Notting Hill Gate</h3>
+                                <p>Subway station</p>
+                                <div class="container-fluid distance">
+                                    <div class="col-md-6 text-left">3 Min</div>
+                                    <div class="col-md-6 text-right">0.4 Mile</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="assets/img/img38.jpg" alt="Lights">
+                            <div class="caption">
+                                <h3>Notting Hill Gate</h3>
+                                <p>Subway station</p>
+                                <div class="container-fluid distance">
+                                    <div class="col-md-6 text-left">3 Min</div>
+                                    <div class="col-md-6 text-right">0.4 Mile</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="border-round-wrapper author-wrapper">
+                    <img class="profile" src="assets/img/img39.jpg" />
+                    <h2>Finibus Aliquam</h2>
+                    <p>Etiam sit amet pharetra</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipiscing elit Sed finibus aliquam risus non cursus. Etiam sit a pharetra augue. Interdum malesuada fames ac ante ipsum primis.
+                    </p>
+                    <a class="danger-link" href="#">CONTACT US</a>
+                </div>
+                <div class="border-round-wrapper reserve-wrapper">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2>£3,181</h2><span>/month</span>
+                        </div>
+                        <div class="col-md-6 text-right review-qty">2 reviews</div>
+                        <div class="col-md-6">
+                            <h4>CHECK-IN</h4>
+                            <input type="text" class="datepicker" />
+                        </div>
+                        <div class="col-md-6">
+                            <h4>CHECKOUT</h4>
+                            <input type="text" class="datepicker" />
+                        </div>
+                        <div class="col-md-12">
+                            <h4>GUESTS</h4>
+                            <select>
+                                <option>1 guest</option>
+                                <option>2 guests</option>
+                                <option>3 guests</option>
+                            </select>
+                        </div>
+                        <div class="col-md-12"><button class="btn danger">Reserve</button></div>
+                        <div class="col-md-8 service-item">Accommodation</div>
+                        <div class="col-md-4 service-item text-right"><b>£5,850</b></div>
+                        <div class="col-md-8 service-item">Monthly discount: 30% off</div>
+                        <div class="col-md-4 service-item text-right"><b>-£1,783</b></div>
+                        <div class="col-md-8 service-item">Cleaning fee</div>
+                        <div class="col-md-4 service-item text-right"><b>£50</b></div>
+                        <div class="col-md-8 service-item">Service fee</div>
+                        <div class="col-md-4 service-item text-right"><b>£525</b></div>
+                        <div class="col-md-12"><hr/></div>
+                        <div class="col-md-6 total">Total</div>
+                        <div class="col-md-6 total text-right">£4,642</div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="journey-wrapper">
             <h2 class="text-center">Ready to start your journey?</h2>     
@@ -125,5 +282,11 @@
               </div>
             </div>
         </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/map.js"></script>
+        <script src="assets/js/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
     </body>
 </html>
