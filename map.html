@@ -12,12 +12,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
         <link rel="stylesheet" href="assets/css/custom.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHcRvuCfw6MdafvkS7MRoAjHadaftWDuI&libraries=places"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-        <script src="assets/js/script.js"></script>
-        <script src="assets/js/map.js"></script>
+        <link rel="stylesheet" href="assets/css/switch.css">
+        <link rel="stylesheet" href="assets/css/radio.css">
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHcRvuCfw6MdafvkS7MRoAjHadaftWDuI&libraries=places"></script> -->
+        <link rel="stylesheet" href="assets/js/custom_scrollbar/jquery.mCustomScrollbar.css">
     </head>
     <body>
         <div class="header-wrapper flat-container">
@@ -32,7 +30,7 @@
                         <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt="Logo" /></a>
                     </div>
                 </div>
-                <form class="navbar-form navbar-left" action="/action_page.php">
+                <form class="navbar-form navbar-left search-address" action="/action_page.php">
                     <div class="input-group">
                       <input type="text" class="form-control" id="gmap-search" placeholder="Search by location">
                       <span class="search-icon"><i class="glyphicon glyphicon-search"></i></span>
@@ -80,7 +78,7 @@
                         </li>
                     </ul>
                 </div>
-                </nav>
+            </nav>
         </div>
         <div class="filter-wrapper overflow-show">
             <div class="flat-container container">
@@ -151,7 +149,7 @@
                     </div>
                 </div>
                 <div class="inline-wrapper">
-                    <a class="filter-link" href="#"><i class="glyphicon glyphicon-align-justify"></i>&nbsp;Filters</a>
+                    <a class="filter-link" href="javascript:showFilterModal();"><i class="glyphicon glyphicon-align-justify"></i>&nbsp;Filters</a>
                     <button class="filter-btn">Balcony</button>
                     <button class="filter-btn on">Price</button>
                     <button class="filter-btn">Bathroom</button>
@@ -168,19 +166,35 @@
                     <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" id="sort-by-tag" data-toggle="dropdown">Search by: #tag
                         <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="sort-by-tag">
-                            <li><a href="#">Pain Point</a></li>
-                            <li><a href="#">Reminder</a></li>
-                            <li><a href="#">Quick Action</a></li>
-                            <li><a href="#">Usability issue</a></li>
-                            <li class="text-center"><button class="btn">+ Add Tag</button></li>
-                        </ul>
+                        <div class="dropdown-menu" role="menu" aria-labelledby="sort-by-tag">
+                            <div class="container-fluid">
+                                <form role="form">
+                                    <div class="radio radio-purple">
+                                        <input type="radio" name="radio" id="radio1" value="option1" checked>
+                                        <label for="radio1">Pain Point</label>
+                                    </div>
+                                    <div class="radio radio-purple">
+                                        <input type="radio" name="radio" id="radio2" value="option2">
+                                        <label for="radio2">Reminder</label>
+                                    </div>
+                                    <div class="radio radio-purple">
+                                        <input type="radio" name="radio" id="radio3" value="option3">
+                                        <label for="radio3">Quick Action</label>
+                                    </div>
+                                    <div class="radio radio-purple">
+                                        <input type="radio" name="radio" id="radio4" value="option4">
+                                        <label for="radio4">Usability issue</label>
+                                    </div>
+                                </form>
+                                <button class="btn">+ Add Tag</button></li>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-6 text-right">
                     <div class="clearfix inline-wrapper">
                         <div class="material-switch pull-right">
-                            <input id="map-view" name="map-view" type="checkbox"/>
+                            <input id="map-view" name="map-view" type="checkbox" checked/>
                             <label for="map-view" class="label-primary"></label>
                             Map View
                         </div>
@@ -198,6 +212,271 @@
                             <li><a href="#">Square Feet</a></li>
                             <li><a href="#">Lot Size</a></li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="property-wrapper flat-container">
+            <div class="property-list thumbnail-list hide">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="property-item">
+                                <div class="badge">NEW</div>
+                                <img src="assets/img/img26.jpg" class="cover-img" alt="property" />
+                                <div class="padding-wrapper">
+                                    <h3>Jameson Street</h3>
+                                    <p class="address">London, W8 7SH</p>
+                                    <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand...</p>
+                                    <div class="condition">
+                                        <ul>
+                                            <li><img src="assets/img/img28.png" />4 Guests</li>
+                                            <li><img src="assets/img/img29.png" />2 Beds</li>
+                                            <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="property-item new">
+                                <div class="badge">NEW</div>
+                                <img src="assets/img/img26.jpg" class="cover-img" alt="property" />
+                                <div class="padding-wrapper">
+                                    <h3>Jameson Street</h3>
+                                    <p class="address">London, W8 7SH</p>
+                                    <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand...</p>
+                                    <div class="condition">
+                                        <ul>
+                                            <li><img src="assets/img/img28.png" />4 Guests</li>
+                                            <li><img src="assets/img/img29.png" />2 Beds</li>
+                                            <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="property-item">
+                                <div class="badge">NEW</div>
+                                <img src="assets/img/img26.jpg" class="cover-img" alt="property" />
+                                <div class="padding-wrapper">
+                                    <h3>Jameson Street</h3>
+                                    <p class="address">London, W8 7SH</p>
+                                    <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand...</p>
+                                    <div class="condition">
+                                        <ul>
+                                            <li><img src="assets/img/img28.png" />4 Guests</li>
+                                            <li><img src="assets/img/img29.png" />2 Beds</li>
+                                            <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="property-item">
+                                <div class="badge">NEW</div>
+                                <img src="assets/img/img26.jpg" class="cover-img" alt="property" />
+                                <div class="padding-wrapper">
+                                    <h3>Jameson Street</h3>
+                                    <p class="address">London, W8 7SH</p>
+                                    <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand...</p>
+                                    <div class="condition">
+                                        <ul>
+                                            <li><img src="assets/img/img28.png" />4 Guests</li>
+                                            <li><img src="assets/img/img29.png" />2 Beds</li>
+                                            <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="property-item">
+                                <div class="badge">NEW</div>
+                                <img src="assets/img/img26.jpg" class="cover-img" alt="property" />
+                                <div class="padding-wrapper">
+                                    <h3>Jameson Street</h3>
+                                    <p class="address">London, W8 7SH</p>
+                                    <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand...</p>
+                                    <div class="condition">
+                                        <ul>
+                                            <li><img src="assets/img/img28.png" />4 Guests</li>
+                                            <li><img src="assets/img/img29.png" />2 Beds</li>
+                                            <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="property-item">
+                                <div class="badge">NEW</div>
+                                <img src="assets/img/img26.jpg" class="cover-img" alt="property" />
+                                <div class="padding-wrapper">
+                                    <h3>Jameson Street</h3>
+                                    <p class="address">London, W8 7SH</p>
+                                    <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand...</p>
+                                    <div class="condition">
+                                        <ul>
+                                            <li><img src="assets/img/img28.png" />4 Guests</li>
+                                            <li><img src="assets/img/img29.png" />2 Beds</li>
+                                            <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="property-item">
+                                <div class="badge">NEW</div>
+                                <img src="assets/img/img26.jpg" class="cover-img" alt="property" />
+                                <div class="padding-wrapper">
+                                    <h3>Jameson Street</h3>
+                                    <p class="address">London, W8 7SH</p>
+                                    <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand...</p>
+                                    <div class="condition">
+                                        <ul>
+                                            <li><img src="assets/img/img28.png" />4 Guests</li>
+                                            <li><img src="assets/img/img29.png" />2 Beds</li>
+                                            <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="property-item">
+                                <div class="badge">NEW</div>
+                                <img src="assets/img/img26.jpg" class="cover-img" alt="property" />
+                                <div class="padding-wrapper">
+                                    <h3>Jameson Street</h3>
+                                    <p class="address">London, W8 7SH</p>
+                                    <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand...</p>
+                                    <div class="condition">
+                                        <ul>
+                                            <li><img src="assets/img/img28.png" />4 Guests</li>
+                                            <li><img src="assets/img/img29.png" />2 Beds</li>
+                                            <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center"><button class="btn danger">View More Properties</button></div>
+                </div>
+            </div>
+            <div class="property-list list-with-map">
+                <div class="clearfix">
+                    <div class="panel-left col-md-6" data-mcs-theme="dark">
+                        <div class="property-item clearfix new">
+                            <div class="col col-md-4 row">
+                                <div class="badge">NEW</div>
+                                <img class="cover-img" src="assets/img/img26.jpg" alt="Property image" />
+                            </div>
+                            <div class="col col-md-8">
+                                <h3>Pennard Road</h3>
+                                <p class="address">London, W12 8DW</p>
+                                <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand, Westminster, WC2.</p>
+                                <div class="condition">
+                                    <ul>
+                                        <li><img src="assets/img/img28.png" />4 Guests</li>
+                                        <li><img src="assets/img/img29.png" />2 Beds</li>
+                                        <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property-item clearfix">
+                            <div class="col col-md-4 row">
+                                <img class="cover-img" src="assets/img/img26.jpg" alt="Property image" />
+                            </div>
+                            <div class="col col-md-8">
+                                <h3>Pennard Road</h3>
+                                <p class="address">London, W12 8DW</p>
+                                <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand, Westminster, WC2.</p>
+                                <div class="condition">
+                                    <ul>
+                                        <li><img src="assets/img/img28.png" />4 Guests</li>
+                                        <li><img src="assets/img/img29.png" />2 Beds</li>
+                                        <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property-item clearfix">
+                            <div class="col col-md-4 row">
+                                <img class="cover-img" src="assets/img/img26.jpg" alt="Property image" />
+                            </div>
+                            <div class="col col-md-8">
+                                <h3>Pennard Road</h3>
+                                <p class="address">London, W12 8DW</p>
+                                <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand, Westminster, WC2.</p>
+                                <div class="condition">
+                                    <ul>
+                                        <li><img src="assets/img/img28.png" />4 Guests</li>
+                                        <li><img src="assets/img/img29.png" />2 Beds</li>
+                                        <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property-item clearfix">
+                            <div class="col col-md-4 row">
+                                <img class="cover-img" src="assets/img/img26.jpg" alt="Property image" />
+                            </div>
+                            <div class="col col-md-8">
+                                <h3>Pennard Road</h3>
+                                <p class="address">London, W12 8DW</p>
+                                <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand, Westminster, WC2.</p>
+                                <div class="condition">
+                                    <ul>
+                                        <li><img src="assets/img/img28.png" />4 Guests</li>
+                                        <li><img src="assets/img/img29.png" />2 Beds</li>
+                                        <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property-item clearfix">
+                            <div class="col col-md-4 row">
+                                <img class="cover-img" src="assets/img/img26.jpg" alt="Property image" />
+                            </div>
+                            <div class="col col-md-8">
+                                <h3>Pennard Road</h3>
+                                <p class="address">London, W12 8DW</p>
+                                <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand, Westminster, WC2.</p>
+                                <div class="condition">
+                                    <ul>
+                                        <li><img src="assets/img/img28.png" />4 Guests</li>
+                                        <li><img src="assets/img/img29.png" />2 Beds</li>
+                                        <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property-item clearfix">
+                            <div class="col col-md-4 row">
+                                <img class="cover-img" src="assets/img/img26.jpg" alt="Property image" />
+                            </div>
+                            <div class="col col-md-8">
+                                <h3>Pennard Road</h3>
+                                <p class="address">London, W12 8DW</p>
+                                <p class="description">A luxurious 2 bedroom apartment in the sought after 190 Strand, Westminster, WC2.</p>
+                                <div class="condition">
+                                    <ul>
+                                        <li><img src="assets/img/img28.png" />4 Guests</li>
+                                        <li><img src="assets/img/img29.png" />2 Beds</li>
+                                        <li><img src="assets/img/img30.png" />1 Bathroom</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-right col-md-6">
+                        <div id="map_viewer"></div>
                     </div>
                 </div>
             </div>
@@ -269,5 +548,185 @@
               </div>
             </div>
         </div>
+        <div class="modal" id="filter-modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-center">Filters</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Price range</h3>
+                        <p>The average nightly price is £35</p>
+                        <div id="filter-price-slider"></div>
+                        <hr />
+                        <h3>Type of place</h3>
+                        <form>
+                            <div class="container-fluid">
+                                <div class="col-md-4">
+                                    <div class="default-checkbox">
+                                        <label>
+                                            <input type="checkbox" /> Entire place
+                                        </label>
+                                    </div>                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="default-checkbox">
+                                        <label>
+                                            <input type="checkbox" /> Shared room
+                                        </label>
+                                    </div>                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="default-checkbox">
+                                        <label>
+                                            <input type="checkbox" /> Private room
+                                        </label>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </form>
+                        <hr/>
+                        <h3>Rooms and beds</h3>
+                        <div class="container-fluid row">
+                            <div class="col-md-6">
+                                <h4>Bedrooms</h4>
+                                <a class="round-link" href="#">Any</a>
+                                <a class="round-link" href="#">1</a>
+                                <a class="round-link" href="#">2</a>
+                                <a class="round-link" href="#">3</a>
+                                <a class="round-link" href="#">4</a>
+                                <a class="round-link" href="#">5</a>
+                                <a class="round-link" href="#">6</a>
+                                <a class="round-link" href="#">7+</a>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Bedrooms</h4>
+                                <a class="round-link" href="#">Any</a>
+                                <a class="round-link" href="#">1</a>
+                                <a class="round-link" href="#">2</a>
+                                <a class="round-link" href="#">3</a>
+                                <a class="round-link" href="#">4</a>
+                                <a class="round-link" href="#">5</a>
+                                <a class="round-link" href="#">6</a>
+                                <a class="round-link" href="#">7+</a>
+                            </div>
+                        </div>
+                        <hr/>
+                        <h3>Property type</h3>
+                        <div class="container-fluid">
+                            <div class="col-md-4">
+                                <div class="property-type">
+                                    <img class="normal" src="assets/img/img32.png" />
+                                    <img class="hover" src="assets/img/img32_on.png" />
+                                    <h4>House</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="property-type">
+                                    <img class="normal" src="assets/img/img33.png" />
+                                    <img class="hover" src="assets/img/img33_on.png" />
+                                    <h4>Flat</h4>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="property-type">
+                                    <img class="normal" src="assets/img/img34.png" />
+                                    <img class="hover" src="assets/img/img34_on.png" />
+                                    <h4>Hotel</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <h3>Amenities</h3>
+                        <form>
+                            <div class="container-fluid">
+                                <div class="col-md-4">
+                                    <div class="default-checkbox">
+                                        <label>
+                                            <input type="checkbox" /> Wifi
+                                        </label>
+                                    </div>                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="default-checkbox">
+                                        <label>
+                                            <input type="checkbox" /> Air conditioning
+                                        </label>
+                                    </div>                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="default-checkbox">
+                                        <label>
+                                            <input type="checkbox" /> Iron
+                                        </label>
+                                    </div>                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="default-checkbox">
+                                        <label>
+                                            <input type="checkbox" /> Kitchen
+                                        </label>
+                                    </div>                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="default-checkbox">
+                                        <label>
+                                            <input type="checkbox" /> Washing machine
+                                        </label>
+                                    </div>                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="default-checkbox">
+                                        <label>
+                                            <input type="checkbox" /> Free parking
+                                        </label>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </form>
+                        <hr/>
+                        <h3>Booking Options</h3>
+                        <div class="container-fluid">
+                            <div class="col-md-10">
+                                <h4>Instant Book</h4>
+                                <p>Listings you can book without waiting for host approval</p>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="material-switch pull-right">
+                                    <input id="booking-option-1" name="booking-option-1" type="checkbox" checked/>
+                                    <label for="booking-option-1" class="label-primary"></label>
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <h4>Instant Book</h4>
+                                <p>Listings you can book without waiting for host approval</p>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="material-switch pull-right">
+                                    <input id="booking-option-2" name="booking-option-2" type="checkbox" checked/>
+                                    <label for="booking-option-2" class="label-primary"></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="container-fluid">
+                            <div class="col-md-6 text-left"><a class="clearall-link" href="#">Clear All</a></div>
+                            <div class="col-md-6 text-right"><button class="btn danger">Show More</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script src="assets/js/custom_scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="assets/js/map.js"></script>
     </body>
 </html>

@@ -196,6 +196,13 @@ body {
     padding-right: 48px;
 }
 
+@media (max-width: 1290px) {
+    .navbar .search-address {
+        display: none;
+    }
+
+}
+
 .navbar .search-icon {
     width: 40px;
     height: 40px;
@@ -299,11 +306,11 @@ body {
     margin: 20px 0;
 }
 
-.filter-wrapper .ui-slider-range {
+.ui-slider-range {
     background: #6346fa;
 }
 
-.filter-wrapper .ui-slider-handle {
+.ui-slider-handle {
     border-radius: 50%;
     border: 3px solid #6346fa;
 }
@@ -874,53 +881,239 @@ body {
     line-height: 55px;
 }
 
-.material-switch > input[type="checkbox"] {
-    display: none;   
-}
-
-.material-switch > label {
-    cursor: pointer;
-    height: 0px;
-    position: relative; 
-    width: 40px;  
-}
-
-.material-switch > label::before {
-    background: rgb(0, 0, 0);
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    content: '';
-    height: 16px;
-    margin-top: -8px;
-    position:absolute;
-    opacity: 0.3;
-    transition: all 0.4s ease-in-out;
-    width: 40px;
-    left: 0;
-}
-.material-switch > label::after {
-    background: rgb(255, 255, 255);
-    border-radius: 16px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
-    content: '';
-    height: 24px;
-    left: -4px;
-    margin-top: -8px;
-    position: absolute;
-    top: -4px;
-    transition: all 0.3s ease-in-out;
-    width: 24px;
-}
-.material-switch > input[type="checkbox"]:checked + label::before {
-    background: inherit;
-    opacity: 0.5;
-}
-.material-switch > input[type="checkbox"]:checked + label::after {
-    background: inherit;
-    left: 20px;
-}
-
 .inline-wrapper {
     display: inline-block;
     vertical-align: top;
+}
+
+.property-wrapper .thumbnail-list .padding-wrapper {
+    padding: 0 20px 20px 20px;
+}
+
+.property-wrapper .thumbnail-list .property-item {
+    position: relative;
+    border-radius: 20px;
+    margin-bottom: 50px;
+}
+
+.property-wrapper .thumbnail-list .property-item:hover {
+    box-shadow: 0 0 10px #EEE;
+}
+
+.property-wrapper .badge {
+    position: absolute;
+    background: #ff4646;
+    border-radius: 20px;
+    color: white;
+    left: 15px;
+    top: 15px;
+    padding: 8px 13px;
+    display: none;
+}
+
+.property-wrapper .thumbnail-list .property-item.new .badge {
+    display: block;
+}
+
+.property-wrapper .thumbnail-list img.cover-img {
+    border-radius: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.property-wrapper h3 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 35px;
+    color: #050038;
+    padding: 0;
+}
+
+.property-wrapper .address {
+    font-size: 18px;
+    color: #050038;
+    margin-bottom: 15px;
+}
+
+.property-wrapper .description {
+    font-size: 18px;
+    color: #5a5871;
+    margin-bottom: 20px;
+}
+
+.property-wrapper .condition ul {
+    margin: 0;
+    padding: 0;
+}
+
+.property-wrapper .condition li {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    border-right: 1px solid #e5e5e5;
+    padding-right: 4px;
+    font-size: 16px;
+}
+
+.property-wrapper .condition li:last-of-type {
+    border: none;
+}
+
+.property-wrapper .condition img {
+    vertical-align: text-top;
+    margin-right: 10px;
+    margin-bottom: 0;
+}
+
+.property-wrapper .property-list.hide {
+    display: none;
+}
+
+.property-wrapper .property-list .panel-left {
+    height: 700px;
+}
+
+.property-wrapper .property-list .panel-right {
+    height: 700px;
+}
+
+.property-wrapper .list-with-map .property-item {
+    min-height: 230px;
+    padding: 10px;
+    position: relative;
+}
+
+.property-wrapper .list-with-map .property-item:hover {
+    box-shadow: 0 0 10px #EEE;
+    border-radius: 20px;
+    border-right: 6px solid #6346fa;
+}
+
+.property-wrapper .list-with-map .property-item.new .badge {
+    display: block;
+    left: 30px;
+}
+
+.property-wrapper .list-with-map .col {
+    height: 100%;
+}
+
+.property-wrapper .list-with-map .cover-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background: #ff4646!important;
+}
+
+.property-wrapper .list-with-map #map_viewer {
+    width: 100%;
+    height: 100%;
+}
+
+.infowindow-wrapper img {
+    border-radius: 20px;
+    width: 100%;
+}
+
+#filter-modal {
+    border-radius: 30px;
+}
+
+#filter-modal .modal-header {
+    background: #050038;
+}
+
+#filter-modal .modal-header .close {
+    margin-top: -35px;
+}
+
+#filter-modal .modal-header .close span {
+    color: white;
+}
+
+#filter-modal .modal-title {
+    font-family: 'gt_walsheim_probold';
+    font-size: 33px;
+    color: white;
+}
+
+#filter-modal h3 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 35px;
+    color: #050038;
+}
+
+#filter-modal h4 {
+    font-size: 25px;
+}
+
+#filter-modal p {
+    font-size: 20px;
+    color: #757575;
+}
+
+#filter-modal .checkbox label::before {
+    top: 5px;
+}
+
+#filter-modal .default-checkbox label {
+    font-size: 16px;
+}
+
+#filter-modal .round-link {
+    display: inline-block;
+    min-width: 70px;
+    border-radius: 20px;
+    padding: 5px 15px;
+    line-height: 26px;
+    border: 1px solid #b2b2b2;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#filter-modal .round-link:hover {
+    background: #6346fa;
+    color: white;
+}
+
+#filter-modal .property-type {
+    border-radius: 10px;
+    border: 1px solid #b2b2b2;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#filter-modal .property-type img {
+    width: 40%;
+    margin: 0 auto;
+}
+
+#filter-modal .property-type .normal {
+    display: block;
+}
+
+#filter-modal .property-type .hover {
+    display: none;
+}
+
+#filter-modal .property-type:hover {
+    background: #6346fa;
+    color: white;
+}
+
+#filter-modal .property-type:hover .normal {
+    display: none;
+}
+
+#filter-modal .property-type:hover .hover {
+    display: block;
+}
+
+#filter-modal .clearall-link {
+    line-height: 55px;
+    color: #050038;
 }

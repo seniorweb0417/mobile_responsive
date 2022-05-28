@@ -1,21 +1,29 @@
-$(document).ready(function() {
-    // var searchBox = new google.maps.places.SearchBox(document.getElementById('gmap-search'));
-    // const center = { lat: 50.064192, lng: -130.605469 };
-    // const defaultBounds = {
-    //     north: center.lat + 0.1,
-    //     south: center.lat - 0.1,
-    //     east: center.lng + 0.1,
-    //     west: center.lng - 0.1,
-    // };
-    // const input = document.getElementById("gmap-search");
-
-    const options = {
-        componentRestrictions: { country: "us" },
-        fields: ["address_components", "geometry", "icon", "name"],
-        strictBounds: false,
-        types: ["establishment"],
+function initialize() {
+    var myLatlng = new google.maps.LatLng(30.030572852922617, 31.02115847241165);
+  
+    var myOptions = {
+      zoom: 8,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
     };
+    var map = new google.maps.Map(document.getElementById("map_viewer"), myOptions);
 
-    const input = document.getElementById("gmap-search");
-    const autocomplete = new google.maps.places.Autocomplete(input, options);
-});
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map,
+        title: "Hello World!",
+    });
+
+    const content =
+    '<div class="infowindow-wrapper">' +
+    '   <img src="assets/img/img31.jpg" />' +
+    '   <h3>Cardigan Road</h3>' +
+    '   <p>A luxurious 2 bedroom apartment in the sought after 190 Strand</p>' +
+    '</div>';
+
+    const infowindow = new google.maps.InfoWindow();
+    infowindow.setContent(content);
+    infowindow.open(map, marker);
+}
+
+google.maps.event.addDomListener(window, "load", initialize());
