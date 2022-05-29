@@ -628,6 +628,13 @@ body {
     width: 100%;
 }
 
+.about-section .img-description {
+    margin-top: 35px;
+    line-height: 35px;
+    border-left: 7px solid #6346fa;
+    padding: 0 45px;
+}
+
 .about-section .purple {
     color: #6346fa;
     font-size: 30px;
@@ -1327,4 +1334,92 @@ body {
     .about-banner h1 {
         width: 100%;
     }
+}
+
+.about-us-wrapper {
+    padding: 150px 0;
+    text-align: center;
+    color: #050038;
+}
+
+.about-us-wrapper h2 {
+    font-size: 30px;
+}
+
+.about-us-wrapper h1 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 70px;
+}
+
+.about-us-wrapper .video-wrapper {
+    position: relative;
+    margin: 70px 0;
+}
+
+.about-us-wrapper .video-wrapper .watch-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.about-us-wrapper .video-wrapper .watch-btn img {
+    border: none;
+    box-shadow: none;
+}
+
+.about-us-wrapper .video-wrapper:hover .watch-btn {
+    display: block
+}
+
+.about-us-wrapper .video-wrapper img {
+    border: 15px solid white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #EEE;
+}
+
+.renters-wrapper h1 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 70px;
+    text-align: center;
+    color: #050038;
+}
+
+.renters-wrapper .thumbnail {
+    text-align: center;
+    margin: 30px 0;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #EEE;
+}
+
+.renters-wrapper .thumbnail img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 100%;
+}
+
+.renters-wrapper .thumbnail h3 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 35px;
+    color: #050038;
+}
+
+.renters-wrapper .thumbnail p {
+    padding: 0 50px;
+    line-height: 35px;
+}
+
+.seo-text-section {
+    margin-bottom: 135px;
+}
+
+.seo-text-section h2 {
+    font-family: 'gt_walsheim_probold';
+    font-size: 60px;
+    color: #050038;
+}
+
+.seo-text-section p {
+    line-height: 40px;
 }
