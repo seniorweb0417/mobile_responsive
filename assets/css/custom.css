@@ -467,7 +467,6 @@ body {
 
 .filter-wrapper .more-link-left {
     left: 0;
-    z-index: 2;
 }
 
 .filter-wrapper .more-link-right {
@@ -681,6 +680,7 @@ body {
     .discover-section img {
         right: 50%;
         transform: translateX(50%);
+        width: 100%;
     }
 }
 
