@@ -122,6 +122,13 @@ body {
     }
 }
 
+@media (min-width: 1921px) {
+    .flat-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 .header-wrapper {
     padding: 30px 0;
 }
@@ -282,10 +289,12 @@ body {
     height: 80px;
     overflow: hidden;
     width: 100%;
+    text-align: center;
 }
 
 .filter-wrapper .dropdown {
     display: inline-block;
+    width: 130px;
 }
 
 .filter-wrapper .dropdown-menu {
@@ -397,11 +406,14 @@ body {
 
 .filter-wrapper .inline-wrapper {
     display: inline-block;
-    padding: 0 45px;
+    padding: 0 30px;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .filter-wrapper .inline-wrapper:first-of-type {
-    padding-left: 0;
+    /* padding-left: 0; */
 }
 
 .filter-wrapper .right-border {
@@ -426,6 +438,11 @@ body {
     text-decoration: none;
 }
 
+.filter-link {
+    color: #050038;
+    text-decoration: none;
+}
+
 .filter-wrapper .more-link .normal {
     display: block;
 }
@@ -440,6 +457,21 @@ body {
 
 .filter-wrapper .more-link.on .on {
     display: block;
+}
+
+.filter-wrapper .more-link-left,
+.filter-wrapper .more-link-right {
+    position: absolute;
+    top: 10px;
+}
+
+.filter-wrapper .more-link-left {
+    left: 0;
+    z-index: 2;
+}
+
+.filter-wrapper .more-link-right {
+    right: 0;
 }
 
 .filter-btn {
@@ -458,6 +490,11 @@ body {
     color: white;
 }
 
+.filter-btn:hover {
+    background: #eee;
+    color: black;
+}
+
 .filter-wrapper .bedroom-link {
     display: inline-block!important;
     width: 60px!important;
@@ -469,6 +506,17 @@ body {
     margin: 10px 10px;
 }
 
+.filter-wrapper .list-container {
+    width: 100%;
+    overflow: hidden;
+    float: left;
+}
+
+.filter-wrapper .list-container .list {
+    float: left;
+    width: max-content;
+    position: relative;
+}
 
 .flat-semi-container {
     width: 1300px;
@@ -494,9 +542,27 @@ body {
 }
 
 .search-section {
-    height: 700px;
+    height: 30vw;
     background: url('../img/img01.jpg') bottom no-repeat;
     background-size: 100% 85%;
+}
+
+@media (max-width: 1112px) {
+    .search-section {
+        height: 50vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .search-section {
+        height: 60vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .search-section {
+        height: 70vw;
+    }
 }
 
 .search-section .nav-tabs {

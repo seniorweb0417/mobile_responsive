@@ -82,81 +82,96 @@
         </div>
         <div class="filter-wrapper overflow-show">
             <div class="flat-container container">
-                <div class="inline-wrapper right-border">
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="anyprice" data-toggle="dropdown">Any Price
-                        <span class="caret"></span></button>
-                        <div class="dropdown-menu" role="menu" aria-labelledby="anyprice">
-                            <div class="container-fluid">
-                                <h3 class="no-padding">The average nightly price £<span id="slider-price">100</span></h3>
-                                <div id="price-slider"></div>
-                                <div class="row">
-                                    <div class="col-md-6">Min Price: <b>£10</b></div>
-                                    <div class="col-md-6 text-right">Max Price: <b>£1000+</b></div>
-                                </div>
-                                <hr />
-                                <div class="row">
-                                    <div class="col-md-6"><button class="btn">Clear</button></div>
-                                    <div class="col-md-6 text-right"><button class="btn danger">Save</button></div>
+                <div class="col-md-4">
+                    <div class="inline-wrapper right-border">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="anyprice" data-toggle="dropdown">Any Price
+                            <span class="caret"></span></button>
+                            <div class="dropdown-menu" role="menu" aria-labelledby="anyprice">
+                                <div class="container-fluid">
+                                    <h3 class="no-padding">The average nightly price £<span id="slider-price">100</span></h3>
+                                    <div id="price-slider"></div>
+                                    <div class="row">
+                                        <div class="col-md-6">Min Price: <b>£10</b></div>
+                                        <div class="col-md-6 text-right">Max Price: <b>£1000+</b></div>
+                                    </div>
+                                    <hr />
+                                    <div class="row">
+                                        <div class="col-md-6"><button class="btn">Clear</button></div>
+                                        <div class="col-md-6 text-right"><button class="btn danger">Save</button></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="anyprice" data-toggle="dropdown">3-5 Beds
-                        <span class="caret"></span></button>
-                        <div class="dropdown-menu" role="menu" aria-labelledby="anyprice">
-                            <div class="container-fluid">
-                                <h3 class="no-padding">Bedrooms</h3>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="anyprice" data-toggle="dropdown">3-5 Beds
+                            <span class="caret"></span></button>
+                            <div class="dropdown-menu" role="menu" aria-labelledby="anyprice">
                                 <div class="container-fluid">
-                                    <a class="bedroom-link" href="#">Any</a>
-                                    <a class="bedroom-link" href="#">1+</a>
-                                    <a class="bedroom-link" href="#">2+</a>
-                                    <a class="bedroom-link" href="#">3+</a>
-                                    <a class="bedroom-link" href="#">4+</a>
+                                    <h3 class="no-padding">Bedrooms</h3>
+                                    <div class="container-fluid">
+                                        <a class="bedroom-link" href="#">Any</a>
+                                        <a class="bedroom-link" href="#">1+</a>
+                                        <a class="bedroom-link" href="#">2+</a>
+                                        <a class="bedroom-link" href="#">3+</a>
+                                        <a class="bedroom-link" href="#">4+</a>
+                                    </div>
+                                    <h3 class="no-padding">Bathrooms</h3>
+                                    <div class="container-fluid">
+                                        <a class="bedroom-link" href="#">Any</a>
+                                        <a class="bedroom-link" href="#">1+</a>
+                                        <a class="bedroom-link" href="#">1.5+</a>
+                                        <a class="bedroom-link" href="#">2+</a>
+                                        <a class="bedroom-link" href="#">3+</a>
+                                    </div>
+                                    <button class="btn danger">Done</button>
                                 </div>
-                                <h3 class="no-padding">Bathrooms</h3>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="anyprice" data-toggle="dropdown">All types
+                            <span class="caret"></span></button>
+                            <div class="dropdown-menu" role="menu" aria-labelledby="anyprice">
+                                <h3>Property type</h3>
                                 <div class="container-fluid">
-                                    <a class="bedroom-link" href="#">Any</a>
-                                    <a class="bedroom-link" href="#">1+</a>
-                                    <a class="bedroom-link" href="#">1.5+</a>
-                                    <a class="bedroom-link" href="#">2+</a>
-                                    <a class="bedroom-link" href="#">3+</a>
+                                    <div class="row">
+                                        <div class="col-md-6"><a href="#" class="any">Any</a></div>
+                                        <div class="col-md-6"><a href="#" class="multi_family_home">Multi Family Home</a></div>
+                                        <div class="col-md-6"><a href="#" class="single_family_home">Single Family Home</a></div>
+                                        <div class="col-md-6"><a href="#" class="mobile">Mobile</a></div>
+                                        <div class="col-md-6"><a href="#" class="condo">Condo</a></div>
+                                        <div class="col-md-6"><a href="#" class="farm">Farm</a></div>
+                                        <div class="col-md-6"><a href="#" class="townhome">Townhome</a></div>
+                                        <div class="col-md-6"><a href="#" class="land">Land</a></div>
+                                    </div>
                                 </div>
                                 <button class="btn danger">Done</button>
                             </div>
                         </div>
                     </div>
-                    <div class="dropdown">
-                        <button class="btn btn-default dropdown-toggle" type="button" id="anyprice" data-toggle="dropdown">All types
-                        <span class="caret"></span></button>
-                        <div class="dropdown-menu" role="menu" aria-labelledby="anyprice">
-                            <h3>Property type</h3>
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-6"><a href="#" class="any">Any</a></div>
-                                    <div class="col-md-6"><a href="#" class="multi_family_home">Multi Family Home</a></div>
-                                    <div class="col-md-6"><a href="#" class="single_family_home">Single Family Home</a></div>
-                                    <div class="col-md-6"><a href="#" class="mobile">Mobile</a></div>
-                                    <div class="col-md-6"><a href="#" class="condo">Condo</a></div>
-                                    <div class="col-md-6"><a href="#" class="farm">Farm</a></div>
-                                    <div class="col-md-6"><a href="#" class="townhome">Townhome</a></div>
-                                    <div class="col-md-6"><a href="#" class="land">Land</a></div>
-                                </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="inline-wrapper">
+                        <a class="more-link-left" href="javascript:void(0);">
+                            <i class="glyphicon glyphicon-chevron-left normal"></i>
+                        </a>
+                        <a class="more-link-right" href="javascript:void(0);">
+                            <i class="glyphicon glyphicon-chevron-right normal"></i>
+                        </a>
+                        <div class="list-container">
+                            <div class="list">
+                                <button class="filter-btn">Balcony</button>
+                                <button class="filter-btn on">Price</button>
+                                <button class="filter-btn">Bathroom</button>
+                                <button class="filter-btn">Furniture</button>
+                                <button class="filter-btn">Location</button>
+                                <button class="filter-btn">Location</button>
+                                <button class="filter-btn">Location</button>
+                                <button class="filter-btn">Garden</button>
+                                <button class="filter-btn on">Residence</button>
                             </div>
-                            <button class="btn danger">Done</button>
                         </div>
                     </div>
-                </div>
-                <div class="inline-wrapper">
-                    <a class="filter-link" href="javascript:showFilterModal();"><i class="glyphicon glyphicon-align-justify"></i>&nbsp;Filters</a>
-                    <button class="filter-btn">Balcony</button>
-                    <button class="filter-btn on">Price</button>
-                    <button class="filter-btn">Bathroom</button>
-                    <button class="filter-btn">Furniture</button>
-                    <button class="filter-btn">Location</button>
-                    <button class="filter-btn">Garden</button>
-                    <button class="filter-btn on">Residence</button>
                 </div>
             </div>
         </div>
@@ -212,6 +227,9 @@
                             <li><a href="#">Square Feet</a></li>
                             <li><a href="#">Lot Size</a></li>
                         </ul>
+                    </div>
+                    <div class="inline-wrapper">
+                        <a class="filter-link" href="javascript:showFilterModal();"><i class="glyphicon glyphicon-align-justify"></i>&nbsp;Filters</a>
                     </div>
                 </div>
             </div>
@@ -727,6 +745,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="assets/js/custom_scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
         <script src="assets/js/script.js"></script>
+        <script src="assets/js/horizontal-scroll/horizontal-scroll.js"></script>
         <script src="assets/js/map.js"></script>
     </body>
 </html>

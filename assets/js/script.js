@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    $('.more-link').click(function() {
-        $(this).toggleClass('on');
-        $('.filter-wrapper').toggleClass('on');
-    });
+    // $('.more-link').click(function() {
+    //     $(this).toggleClass('on');
+    //     $('.filter-wrapper').toggleClass('on');
+    // });
 
     if ($('#price-slider').length) {
         $('#price-slider').slider({

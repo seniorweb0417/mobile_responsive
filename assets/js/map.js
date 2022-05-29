@@ -11,7 +11,8 @@ function initialize() {
     var marker = new google.maps.Marker({
         position: myLatlng,
         map,
-        title: "Hello World!",
+        icon: 'assets/img/marker.png',
+        label: { color: '#FFFFFF', fontWeight: 'bold', fontSize: '14px', text: '£30' }
     });
 
     const content =
