@@ -59,6 +59,18 @@ $(document).ready(function() {
             $('.detail-img-wrapper a').css({'height': w, 'line-height': w + 'px'});
         }
     });
+
+    if ($('.carousel').length) {
+        $(".carousel").swipe({
+            swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+          
+              if (direction == 'left') $(this).carousel('next');
+              if (direction == 'right') $(this).carousel('prev');
+          
+            },
+            allowPageScroll:"vertical"
+        });
+    }
 });
 
 function refreshSwatch() {

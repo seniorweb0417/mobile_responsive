@@ -25,6 +25,11 @@ function initialize() {
     const infowindow = new google.maps.InfoWindow();
     infowindow.setContent(content);
     infowindow.open(map, marker);
+
+
+    // For Autocomplete
+    var input = document.getElementById('gmap-search');
+    new google.maps.places.Autocomplete(input);
 }
 
 google.maps.event.addDomListener(window, "load", initialize());
