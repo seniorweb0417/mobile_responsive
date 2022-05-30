@@ -1058,12 +1058,27 @@ body {
     display: none;
 }
 
-.property-wrapper .property-list .panel-left {
+.property-wrapper .property-list .panel-left,
+.property-wrapper .property-list .panel-right  {
+    float: left;
     height: 700px;
 }
 
-.property-wrapper .property-list .panel-right {
-    height: 700px;
+.property-wrapper .property-list .panel-left {
+    width: 850px;
+}
+
+.property-wrapper .property-list .panel-right  {
+    width: calc(100% - 880px);
+    margin-left: 30px;
+}
+
+@media (max-width: 1400px) {
+    .property-wrapper .property-list .panel-left,
+    .property-wrapper .property-list .panel-right {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 .property-wrapper .list-with-map .property-item {
