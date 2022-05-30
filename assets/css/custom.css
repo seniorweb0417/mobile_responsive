@@ -102,6 +102,11 @@
 
 }
 
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'gt_walsheim_proregular';
     font-size: 20px;
@@ -1474,6 +1479,7 @@ body {
     border: 15px solid white;
     border-radius: 20px;
     box-shadow: 0 0 10px #EEE;
+    width: 100%;
 }
 
 .renters-wrapper h1 {
