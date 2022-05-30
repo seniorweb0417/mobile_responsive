@@ -1,9 +1,4 @@
 $(document).ready(function() {
-    // $('.more-link').click(function() {
-    //     $(this).toggleClass('on');
-    //     $('.filter-wrapper').toggleClass('on');
-    // });
-
     if ($('#price-slider').length) {
         $('#price-slider').slider({
             orientation: "horizontal",
@@ -48,6 +43,18 @@ $(document).ready(function() {
     if ($('.datepicker').length) {
         $('.datepicker').datepicker();
     }
+
+    if ($('.detail-img-wrapper a').length) {
+        var w = $('.detail-img-wrapper a').width();
+        $('.detail-img-wrapper a').css({'height': w, 'line-height': w + 'px'});
+    }
+
+    $(window).resize(function() {
+        if ($('.detail-img-wrapper a').length) {
+            var w = $('.detail-img-wrapper a').width();
+            $('.detail-img-wrapper a').css({'height': w, 'line-height': w + 'px'});
+        }
+    });
 });
 
 function refreshSwatch() {

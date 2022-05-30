@@ -1234,12 +1234,12 @@ body {
 
 .detail-img-wrapper a {
     display: block;
-    line-height: 210px;
     background: #f5f4fb;
     border-radius: 20px;
     text-align: center;
     color: black;
     text-decoration: none;
+    width: 100%;
 }
 
 .property-detail-wrapper {
@@ -1519,4 +1519,41 @@ body {
 
 .seo-text-section p {
     line-height: 40px;
+}
+
+.nav-wrapper .text-right {
+    border-right: 1px solid #EEE;
+}
+
+.nav-wrapper .carousel-wrapper {
+    display: none;
+    position: relative;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .nav-wrapper .normal-screen {
+        display: none;
+    }
+
+    .nav-wrapper .carousel-wrapper {
+        display: block;
+    }
+}
+
+.nav-wrapper .carousel-wrapper .controller {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid #DDD;
+    line-height: 64px;
+    text-align: center;
+    color: #DDD;
+    margin: 0 auto;
+}
+
+.nav-wrapper .carousel-wrapper .controller:hover {
+    background: #ff4646;
+    color: white;
 }
