@@ -30,9 +30,13 @@ $(document).ready(function() {
         if ($(this).is(':checked')) {
             $('.property-list').removeClass('hide');
             $('.thumbnail-list').addClass('hide');
+            $('.site-map').addClass('hidden');
+            $('.footer').addClass('hidden');
         } else {
             $('.property-list').removeClass('hide');
             $('.list-with-map').addClass('hide');
+            $('.site-map').removeClass('hidden');
+            $('.footer').removeClass('hidden');
         }
     });
 
