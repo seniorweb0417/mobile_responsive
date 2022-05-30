@@ -1065,11 +1065,11 @@ body {
 }
 
 .property-wrapper .property-list .panel-left {
-    width: 850px;
+    width: 750px;
 }
 
 .property-wrapper .property-list .panel-right  {
-    width: calc(100% - 880px);
+    width: calc(100% - 780px);
     margin-left: 30px;
 }
 
