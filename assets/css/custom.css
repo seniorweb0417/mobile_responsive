@@ -1229,6 +1229,11 @@ body {
     height: 100%;
 }
 
+.infowindow-wrapper {
+    width: 393px;
+    height: 458px;
+}
+
 .infowindow-wrapper img {
     border-radius: 20px;
     width: 100%;
