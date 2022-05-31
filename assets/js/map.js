@@ -35,7 +35,8 @@ function initialize() {
 google.maps.event.addDomListener(window, "load", initialize());
 
 $(document).ready(function() {
-  var h = $(window).height() - 320;
+  var minus = $('.header-wrapper').outerHeight() + $('.filter-wrapper').outerHeight() + $('.map-filter-wrapper').outerHeight();
+  var h = $(window).height() - minus;
   $('.panel-left').css('height', h);
   $('.panel-right').css('height', h);
 });

@@ -137,6 +137,12 @@ body {
     padding: 30px 0;
 }
 
+@media (max-width: 767px) {
+    .header-wrapper {
+        padding: 10px 0;
+    }
+}
+
 .navbar {
     height: 50px;
     margin: 0;
@@ -162,6 +168,24 @@ body {
     }
 }
 
+@media (max-width: 991px) {
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+
+    .navbar-collapse.collapse .navbar-nav {
+        width: 100%;
+    }
+
+    .navbar-nav>li {
+        float: none !important;
+    }
+}
+
 .navbar-collapse.in {
     position: absolute;
     width: 100%;
@@ -170,6 +194,12 @@ body {
 
 .navbar .nav-link {
     display: inline-block;
+}
+
+@media (max-width: 1355px) {
+    .navbar-form .input-group {
+       display: none; 
+    }
 }
 
 .btn {
@@ -208,11 +238,23 @@ body {
     padding-right: 48px;
 }
 
+
+
 @media (max-width: 1290px) {
     .navbar .search-address {
         display: none;
     }
 
+}
+
+@media (max-width: 991px) {
+    .navbar-header {
+        float: initial !important;
+    }
+
+    .navbar-toggle {
+        display: block !important;
+    }
 }
 
 .navbar .search-icon {
@@ -310,6 +352,12 @@ body {
 @media (max-width: 1267px) {
     .filter-wrapper .dropdown {
         display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .filter-wrapper {
+        padding: 10px;
     }
 }
 
@@ -464,6 +512,12 @@ body {
 .filter-wrapper.overflow-show {
     height: auto;
     overflow: visible;
+}
+
+@media (max-width: 767px) {
+    .filter-wrapper.overflow-show {
+        height: 68px;
+    }
 }
 
 .filter-wrapper.on {
@@ -1018,9 +1072,10 @@ body {
     line-height: 55px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 480px) {
     .map-filter-wrapper .map-filter-item {
-        
+        width: 100%;
+        text-align: center;
     }
 }
 
