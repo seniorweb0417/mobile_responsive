@@ -104,7 +104,6 @@
 
 html {
     width: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -122,15 +121,15 @@ body {
 
 @media (max-width: 1575px) {
     .flat-container {
-        width: 100%;
-        max-width: 100%;
+        width: 95%;
+        max-width: 95%;
     }
 }
 
 @media (min-width: 1921px) {
     .flat-container.responsive-width {
-        width: 100%;
-        max-width: 100%;
+        width: 95%;
+        max-width: 95%;
     }
 }
 

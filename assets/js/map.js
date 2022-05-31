@@ -33,3 +33,9 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, "load", initialize());
+
+$(document).ready(function() {
+  var h = $(window).height() - 318;
+  $('.panel-left').css('height', h);
+  $('.panel-right').css('height', h);
+});

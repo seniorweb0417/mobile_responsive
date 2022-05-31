@@ -32,6 +32,38 @@ $(document).ready(function() {
         }
     });
 
+    $('.list-container').swipe({
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+          
+            if (direction == 'left') $('.more-link-right').click();
+            if (direction == 'right') $('.more-link-left').click();
+        
+        },
+        allowPageScroll:"vertical"
+    });
+
+    $('.list').swipe({
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+          
+            if (direction == 'left') $('.more-link-right').click();
+            if (direction == 'right') $('.more-link-left').click();
+        
+        },
+        allowPageScroll:"vertical",
+        excludedElements: ".noSwipe"
+    });
+
+
+    $('.filter-btn').swipe({
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+          
+            if (direction == 'left') $('.more-link-right').click();
+            if (direction == 'right') $('.more-link-left').click();
+        
+        },
+        allowPageScroll:"vertical",
+        excludedElements: ".noSwipe"
+    });
 });
 
 function initialHorScroll() {
