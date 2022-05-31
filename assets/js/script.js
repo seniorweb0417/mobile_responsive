@@ -53,11 +53,35 @@ $(document).ready(function() {
         $('.detail-img-wrapper a').css({'height': w, 'line-height': w + 'px'});
     }
 
+    initialWindowResize();
     $(window).resize(function() {
-        if ($('.detail-img-wrapper a').length) {
-            var w = $('.detail-img-wrapper a').width();
-            $('.detail-img-wrapper a').css({'height': w, 'line-height': w + 'px'});
-        }
+        initialWindowResize();
+        // if ($('.detail-img-wrapper a').length) {
+        //     var w = $('.detail-img-wrapper a').width();
+        //     $('.detail-img-wrapper a').css({'height': w, 'line-height': w + 'px'});
+        // }
+
+        // if ($(this).width() < 831) {
+        //     $('#map-view-title').html('Map');
+        //     $('#filter-title').html('');
+        // } else {
+        //     $('#map-view-title').html('Map View');
+        //     $('#filter-title').html('Filter');
+        // }
+
+        // if ($(this).width() < 1267) {
+        //     $('#map-view-title').html('Map');
+        //     $('#filter-title').html('');
+        //     $('.filter-wrapper-left').css('display', 'none');
+        //     $('.filter-wrapper-right').removeClass('col-md-8');
+        //     $('.filter-wrapper-right').addClass('col-md-12');
+        // } else {
+        //     $('#map-view-title').html('Map View');
+        //     $('#filter-title').html('Filter');
+        //     $('.filter-wrapper-left').css('display', 'block');
+        //     $('.filter-wrapper-right').addClass('col-md-8');
+        //     $('.filter-wrapper-right').removeClass('col-md-12');
+        // }
     });
 
     if ($('.carousel').length) {
@@ -72,6 +96,35 @@ $(document).ready(function() {
         });
     }
 });
+
+function initialWindowResize() {
+    if ($('.detail-img-wrapper a').length) {
+        var w = $('.detail-img-wrapper a').width();
+        $('.detail-img-wrapper a').css({'height': w, 'line-height': w + 'px'});
+    }
+
+    if ($(window).width() < 831) {
+        $('#map-view-title').html('Map');
+        $('#filter-title').html('');
+    } else {
+        $('#map-view-title').html('Map View');
+        $('#filter-title').html('Filter');
+    }
+
+    if ($(window).width() < 1267) {
+        $('#map-view-title').html('Map');
+        $('#filter-title').html('');
+        $('.filter-wrapper-left').css('display', 'none');
+        $('.filter-wrapper-right').removeClass('col-md-8');
+        $('.filter-wrapper-right').addClass('col-md-12');
+    } else {
+        $('#map-view-title').html('Map View');
+        $('#filter-title').html('Filter');
+        $('.filter-wrapper-left').css('display', 'block');
+        $('.filter-wrapper-right').addClass('col-md-8');
+        $('.filter-wrapper-right').removeClass('col-md-12');
+    }
+}
 
 function refreshSwatch() {
     var slider_value = $('#price-slider').slider('value');

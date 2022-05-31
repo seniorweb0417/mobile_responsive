@@ -82,7 +82,7 @@
         </div>
         <div class="filter-wrapper overflow-show">
             <div class="flat-container responsive-width clearfix">
-                <div class="col-md-4 text-left">
+                <div class="col-md-4 text-left filter-wrapper-left">
                     <div class="inline-wrapper right-padding right-border">
                         <div class="dropdown">
                             <button class="btn btn-default dropdown-toggle" type="button" id="anyprice" data-toggle="dropdown">Any Price
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 filter-wrapper-right">
                     <div class="inline-wrapper">
                         <a class="more-link-left" href="javascript:void(0);">
                             <i class="glyphicon glyphicon-chevron-left normal"></i>
@@ -177,7 +177,7 @@
         </div>
         <div class="map-filter-wrapper flat-container responsive-width">
             <div class="container-fluid">
-                <div class="col-md-6">
+                <div class="map-filter-item col-md-6 col-sm-6">
                     <div class="dropdown">
                         <button class="btn btn-default dropdown-toggle" type="button" id="sort-by-tag" data-toggle="dropdown">Search by: #tag
                         <span class="caret"></span></button>
@@ -206,18 +206,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="map-filter-item col-md-6  col-sm-6 text-right">
                     <div class="clearfix inline-wrapper">
                         <div class="material-switch pull-right">
                             <input id="map-view" name="map-view" type="checkbox" checked/>
                             <label for="map-view" class="label-primary"></label>
-                            Map View
+                            <span id="map-view-title">Map View</span>
                         </div>
                     </div>
                     <div class="dropdown inline-wrapper">
                         <button class="btn btn-default dropdown-toggle" type="button" id="sort-by-newest" data-toggle="dropdown">Sort by Newest
                         <span class="caret"></span></button>
-                        <ul class="dropdown-menu" role="menu" aria-labelledby="sort-by-newest">
+                        <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="sort-by-newest">
                             <li><a href="#">Homes for you</a></li>
                             <li><a href="#">Price(High to Low)</a></li>
                             <li><a href="#">Price(Low to High)</a></li>
@@ -229,7 +229,9 @@
                         </ul>
                     </div>
                     <div class="inline-wrapper">
-                        <a class="filter-link" href="javascript:showFilterModal();"><i class="glyphicon glyphicon-align-justify"></i>&nbsp;Filters</a>
+                        <a class="filter-link" href="javascript:showFilterModal();">
+                            <i class="glyphicon glyphicon-align-justify"></i>&nbsp;<span id="filter-title">Filters</span>
+                        </a>
                     </div>
                 </div>
             </div>

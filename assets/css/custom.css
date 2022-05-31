@@ -278,7 +278,7 @@ body {
 
 .navbar .dropdown-menu li a {
     background: url('../img/list_style.jpg') 17px center no-repeat;
-    padding-left: 35px;
+    padding-left: 35px !important;
 }
 
 .navbar .dropdown-menu .signout-li a {
@@ -298,14 +298,18 @@ body {
 
 .filter-wrapper .dropdown {
     display: inline-block;
-    width: 130px;
+    width: 110px;
 }
 
 @media (max-width: 1414px) {
     .filter-wrapper .dropdown {
-        display: block;
-        width: 130px;
         margin: 0 auto;
+    }
+}
+
+@media (max-width: 1267px) {
+    .filter-wrapper .dropdown {
+        display: block;
     }
 }
 
@@ -326,6 +330,12 @@ body {
     .filter-wrapper .right-border {
         border: none !important;
     }
+}
+
+.filter-wrapper .dropdown .btn {
+    padding: 15px 0;
+    text-align: center;
+    margin: 0;
 }
 
 .filter-wrapper .dropdown-menu {
@@ -990,6 +1000,12 @@ body {
     padding: 40px 0;
 }
 
+@media (max-width: 991px) {
+    .map-filter-wrapper {
+        padding: 10px;
+    }
+}
+
 .map-filter-wrapper .dropdown-toggle,
 .map-filter-wrapper .dropdown-toggle:hover {
     border: none;
@@ -1000,6 +1016,12 @@ body {
 .map-filter-wrapper .dropdown-menu a {
     height: 55px;
     line-height: 55px;
+}
+
+@media (max-width: 767px) {
+    .map-filter-wrapper .map-filter-item {
+        
+    }
 }
 
 .inline-wrapper {
